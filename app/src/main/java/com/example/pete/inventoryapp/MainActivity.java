@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         int lastRowNumber = getLastRowNumber();
 
         // Create a range of data
-        for (int i = 1; i < 16; i++) {
+        for (int i = 1; i < 6; i++) {
             // Build a ContentValues object
             ContentValues values = new ContentValues();
             // String
