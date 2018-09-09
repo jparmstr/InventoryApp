@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingBottom="@dimen/listItemVerticalPadding"
+    android:paddingTop="@dimen/listItemVerticalPadding">
+
+    <!--
+    There's an issue with list items containing a button where
+    the listView's onItemClickListener ignores list item clicks.
+    This is addressed here by adding the descendantFocusability attribute to the root container
+    and focusableInTouchMode to each of the child Views.
+     -->
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:paddingEnd="@dimen/listItemHorizontalPadding"
+            android:paddingStart="@dimen/listItemHorizontalPadding"
+            android:paddingTop="@dimen/listItemVerticalPadding"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            tools:text="Book Name that is long enough to break a line" />
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewName"
+            android:focusableInTouchMode="true"
+            android:paddingBottom="@dimen/listItemVerticalPadding"
+            android:paddingEnd="@dimen/listItemHorizontalPadding"
+            android:paddingStart="@dimen/listItemHorizontalPadding"
+            android:paddingTop="@dimen/listItemVerticalPadding"
+            android:textColor="@color/colorDarkGray"
+            tools:text="$0.00" />
+
+        <TextView
+            android:id="@+id/textViewQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewName"
+            android:layout_toEndOf="@+id/textViewPrice"
+            android:focusableInTouchMode="true"
+            android:paddingBottom="@dimen/listItemVerticalPadding"
+            android:paddingEnd="@dimen/listItemHorizontalPadding"
+            android:paddingStart="@dimen/listItemHorizontalPadding"
+            android:paddingTop="@dimen/listItemVerticalPadding"
+            android:textColor="@color/colorDarkGray"
+            tools:text="Quantity: 1" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonSale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:layout_marginEnd="@dimen/listItemHorizontalPadding"
+        android:text="@string/button_sale_text" />
+
+</LinearLayout>

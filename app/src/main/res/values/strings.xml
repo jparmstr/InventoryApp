@@ -1,3 +1,53 @@
 <resources>
     <string name="app_name">InventoryApp</string>
+
+    <!-- Activity titles -->
+    <string name="title_main_activity">Inventory Catalog</string>
+    <string name="title_viewer_activity">View Book</string>
+    <string name="title_editor_activity_edit">Edit Book</string>
+    <string name="title_editor_activity_new">Add Book</string>
+
+    <!-- List Item Strings -->
+    <string name="quantityString">Quantity: %1$d</string>
+    <string name="button_sale_text">Sale</string>
+
+    <!-- MainActivity Strings -->
+    <string name="empty_view_title_text">No books in inventory</string>
+    <string name="empty_view_subtitle_text">Get started by adding a book</string>
+    <string name="empty_view_drawable_content_description">Empty folder icon</string>
+
+    <!-- MainActivity: Options Menu Strings -->
+    <string name="action_insert_dummy_data">Insert Dummy Data</string>
+    <string name="action_delete_all_entries">Delete All Entries</string>
+
+    <!-- EditorActivity: Hints -->
+    <string name="edit_name_hint">Name</string>
+    <string name="edit_price_hint">Price</string>
+    <string name="edit_quantity_hint">Quantity</string>
+    <string name="edit_supplier_name_hint">Supplier Name</string>
+    <string name="edit_supplier_phone_hint">Supplier Phone Number</string>
+    <string name="edit_optional_hint">(optional)</string>
+
+    <!-- EditorActivity: Buttons -->
+    <string name="editor_button_save">Save</string>
+    <string name="editor_button_cancel">Cancel</string>
+
+    <!-- EditorActivity: Options Menu Strings -->
+    <string name="action_delete_entry">Delete</string>
+
+    <!-- EditorActivity: Unsaved changes Dialog Box -->
+    <string name="unsaved_changes_message_prompt">Discard changes?</string>
+    <string name="unsaved_changes_discard">Discard</string>
+    <string name="unsaved_changes_keep_editing">Keep Editing</string>
+
+    <!-- EditorActivity: Delete confirmation Dialog Box -->
+    <string name="delete_dialog_message_prompt">Delete this book?</string>
+    <string name="delete_dialog_delete">Delete</string>
+    <string name="delete_dialog_cancel">Cancel</string>
+
+    <!-- ViewerActivity: Buttons -->
+    <string name="button_plus_text">+</string>
+    <string name="button_minus_text">-</string>
+    <string name="button_contact_text">Contact</string>
+
 </resources>

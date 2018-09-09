@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditorActivity">
+
+    <!--Name-->
+    <TextView
+        android:id="@+id/labelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/viewerTextViewName"
+        android:padding="@dimen/editor_activity_padding"
+        android:text="@string/edit_name_hint"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/editor_activity_label_font_size" />
+
+    <TextView
+        android:id="@+id/viewerTextViewName"
+        style="@style/viewer_activity_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelName"
+        android:padding="@dimen/editor_activity_padding"
+        tools:text="Name" />
+
+    <!--Price-->
+    <TextView
+        android:id="@+id/labelPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewerTextViewName"
+        android:labelFor="@id/viewerTextViewPrice"
+        android:padding="@dimen/editor_activity_padding"
+        android:text="@string/edit_price_hint"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/editor_activity_label_font_size" />
+
+    <TextView
+        android:id="@+id/viewerTextViewPrice"
+        style="@style/viewer_activity_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelPrice"
+        android:padding="@dimen/editor_activity_padding"
+        tools:text="Price" />
+
+    <!--Quantity-->
+    <TextView
+        android:id="@+id/labelQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewerTextViewPrice"
+        android:labelFor="@id/viewerTextViewQuantity"
+        android:padding="@dimen/editor_activity_padding"
+        android:text="@string/edit_quantity_hint"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/editor_activity_label_font_size" />
+
+    <!-- Linear Layout for quantity text, minus button, and plus button -->
+    <LinearLayout
+        android:id="@+id/linearLayoutQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelQuantity"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/viewerTextViewQuantity"
+            style="@style/viewer_activity_text_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/editor_activity_padding"
+            tools:text="Quantity" />
+
+        <Button
+            android:id="@+id/buttonMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_minus_text" />
+
+        <Button
+            android:id="@+id/buttonPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/listItemHorizontalPadding"
+            android:text="@string/button_plus_text" />
+
+    </LinearLayout>
+
+    <!--Supplier Name-->
+    <TextView
+        android:id="@+id/labelSupplierName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutQuantity"
+        android:labelFor="@id/viewerTextViewSupplierName"
+        android:padding="@dimen/editor_activity_padding"
+        android:text="@string/edit_supplier_name_hint"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/editor_activity_label_font_size" />
+
+    <TextView
+        android:id="@+id/viewerTextViewSupplierName"
+        style="@style/viewer_activity_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelSupplierName"
+        android:padding="@dimen/editor_activity_padding"
+        tools:text="Supplier Name" />
+
+    <!--Supplier Phone Number-->
+    <TextView
+        android:id="@+id/labelSupplierPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewerTextViewSupplierName"
+        android:labelFor="@id/viewerTextViewSupplierPhone"
+        android:padding="@dimen/editor_activity_padding"
+        android:text="@string/edit_supplier_phone_hint"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/editor_activity_label_font_size" />
+
+    <!-- Linear Layout for supplier phone number and contact button -->
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSupplierPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelSupplierPhone"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/viewerTextViewSupplierPhone"
+            style="@style/viewer_activity_text_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/editor_activity_padding"
+            tools:text="Supplier Phone Number" />
+
+        <Button
+            android:id="@+id/buttonContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/listItemHorizontalPadding"
+            android:text="@string/button_contact_text" />
+
+    </LinearLayout>
+
+    <!-- Floating Action Button (click to edit this entry) -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/viewer_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_edit" />
+
+</RelativeLayout>

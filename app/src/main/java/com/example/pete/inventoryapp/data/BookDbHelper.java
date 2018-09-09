@@ -5,18 +5,16 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.example.pete.inventoryapp.data.BooksContract.BookEntry;
+import com.example.pete.inventoryapp.data.BookContract.BookEntry;
 
-import java.io.Console;
+public class BookDbHelper extends SQLiteOpenHelper {
 
-public class BooksDbHelper extends SQLiteOpenHelper {
-
-    private static final String LOG_TAG = BooksDbHelper.class.getSimpleName();
+    private static final String LOG_TAG = BookDbHelper.class.getSimpleName();
 
     private static final String DATABASE_NAME = "inventory.db";
     private static final int DATABASE_VERSION = 1;
 
-    public BooksDbHelper(Context context) {
+    public BookDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 

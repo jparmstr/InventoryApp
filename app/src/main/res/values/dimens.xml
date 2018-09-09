@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="listItemHorizontalPadding">8dp</dimen>
+    <dimen name="listItemVerticalPadding">4dp</dimen>
+
+    <!-- Margin around the floating action button in CatalogActivity -->
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Common margin value used throughout the app -->
+    <dimen name="activity_margin">16dp</dimen>
+
+    <dimen name="editor_activity_label_font_size">16sp</dimen>
+
+    <dimen name="editor_activity_padding">8dp</dimen>
+</resources>
