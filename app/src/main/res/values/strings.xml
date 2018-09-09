@@ -50,4 +50,7 @@
     <string name="button_minus_text">-</string>
     <string name="button_contact_text">Contact</string>
 
+    <!-- ViewerActivity: Text -->
+    <string name="viewer_no_data_text">(none)</string>
+
 </resources>

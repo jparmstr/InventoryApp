@@ -335,12 +335,27 @@ public class ViewerActivity extends AppCompatActivity implements
             // Create a formatter for the price
             NumberFormat format = NumberFormat.getCurrencyInstance();
 
+            // Hide the Contact supplier button if there is no supplier phone number
+            if (supplierPhone.equals("")) {
+                buttonContact.setVisibility(View.GONE);
+            }
+
+            // For optional fields, display no data text instead of nothing
+            if (supplierName.equals("")) {
+                supplierName = getString(R.string.viewer_no_data_text);
+            }
+
+            if (supplierPhone.equals("")) {
+                supplierPhone = getString(R.string.viewer_no_data_text);
+            }
+
             // Bind data to the Views
             viewerTextViewName.setText(name);
             viewerTextViewPrice.setText(format.format(price));
             viewerTextViewQuantity.setText(String.valueOf(quantity));
             viewerTextViewSupplierName.setText(supplierName);
             viewerTextViewSupplierPhone.setText(supplierPhone);
+
         }
     }
 
