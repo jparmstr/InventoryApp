@@ -259,8 +259,9 @@ public class EditorActivity extends AppCompatActivity implements
             }
         }
 
-        // Close the activity
-        finish();
+        // Go back to the MainActivity
+        Intent showMainActivity = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(showMainActivity);
     }
 
     //region options menu overrides and methods
