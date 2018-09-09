@@ -9,8 +9,6 @@ import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
-import android.preference.EditTextPreference;
-import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
@@ -21,14 +19,9 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.pete.inventoryapp.data.BookContract.BookEntry;
-
-import org.w3c.dom.Text;
-
-import java.text.NumberFormat;
 
 /**
  * Allows user to create a new book or edit an existing one.
@@ -39,7 +32,7 @@ public class EditorActivity extends AppCompatActivity implements
     //region constants, instance variables, and View references
 
     // Identifier for the data loader
-    private static final int EXISTING_BOOK_LOADER = 1;
+    private static final int EXISTING_BOOK_LOADER = 0;
 
     // Content URI for the existing book (null if it's a new book)
     private Uri currentBookUri;
@@ -48,22 +41,25 @@ public class EditorActivity extends AppCompatActivity implements
     private boolean entryHasChanged = false;
 
     // View references
-    EditText editTextName;
-    EditText editTextPrice;
-    EditText editTextQuantity;
-    EditText editTextSupplierName;
-    EditText editTextSupplierPhone;
-    BottomNavigationView editorBottomNavigationView;
+    private EditText editTextName;
+    private EditText editTextPrice;
+    private EditText editTextQuantity;
+    private EditText editTextSupplierName;
+    private EditText editTextSupplierPhone;
+    private BottomNavigationView editorBottomNavigationView;
 
     //endregion constants, instance variables, and View references
 
     //region Listener objects
 
     // Listener that sets entryHasChanged = true when a user touches an EditText View
-    private View.OnTouchListener onTouchListener = (v, event) -> {
+    private final View.OnTouchListener onTouchListener = (v, event) -> {
         // Call the performClick method if necessary
         // (addresses a warning from Android Studio)
         switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                v.performClick();
+                break;
             case MotionEvent.ACTION_UP:
                 v.performClick();
                 break;
@@ -73,7 +69,7 @@ public class EditorActivity extends AppCompatActivity implements
         return false;
     };
 
-    private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener = item -> {
+    private final BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener = item -> {
         switch (item.getItemId()) {
             case R.id.action_save:
                 // Save button (bottom navigation bar)

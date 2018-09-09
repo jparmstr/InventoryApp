@@ -2,17 +2,13 @@ package com.example.pete.inventoryapp;
 
 import android.app.AlertDialog;
 import android.app.LoaderManager;
-import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.CursorLoader;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
-import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,7 +19,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.pete.inventoryapp.data.BookContract;
-import com.example.pete.inventoryapp.data.BookProvider;
 
 import java.text.NumberFormat;
 
@@ -35,26 +30,23 @@ public class ViewerActivity extends AppCompatActivity implements
     //region constants, instance variables, and View references
 
     // Identifier for the data loader
-    private static final int EXISTING_BOOK_LOADER = 2;
+    private static final int EXISTING_BOOK_LOADER = 0;
 
     // Content URI for the existing book (null if it's a new book)
     private Uri currentBookUri;
 
-    // Keep track of whether this entry has been changed or not
-    private boolean entryHasChanged = false;
-
     // View references: TextViews
-    TextView viewerTextViewName;
-    TextView viewerTextViewPrice;
-    TextView viewerTextViewQuantity;
-    TextView viewerTextViewSupplierName;
-    TextView viewerTextViewSupplierPhone;
+    private TextView viewerTextViewName;
+    private TextView viewerTextViewPrice;
+    private TextView viewerTextViewQuantity;
+    private TextView viewerTextViewSupplierName;
+    private TextView viewerTextViewSupplierPhone;
 
     // View references: Buttons
-    FloatingActionButton viewer_fab;
-    Button buttonPlus;
-    Button buttonMinus;
-    Button buttonContact;
+    private FloatingActionButton viewer_fab;
+    private Button buttonPlus;
+    private Button buttonMinus;
+    private Button buttonContact;
 
     //endregion constants, instance variables, and View references
 

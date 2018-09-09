@@ -7,7 +7,7 @@ import android.util.Log;
 
 import com.example.pete.inventoryapp.data.BookContract.BookEntry;
 
-public class BookDbHelper extends SQLiteOpenHelper {
+class BookDbHelper extends SQLiteOpenHelper {
 
     private static final String LOG_TAG = BookDbHelper.class.getSimpleName();
 

@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CursorAdapter;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,12 +24,12 @@ import static android.widget.Toast.LENGTH_SHORT;
  * that uses a {@link Cursor} of book data as its data source. This adapter knows
  * how to create list items for each row of book data in the {@link Cursor}.
  */
-public class BookCursorAdapter extends CursorAdapter {
+class BookCursorAdapter extends CursorAdapter {
 
     // View references
-    TextView textViewName;
-    TextView textViewPrice;
-    TextView textViewQuantity;
+    private TextView textViewName;
+    private TextView textViewPrice;
+    private TextView textViewQuantity;
 
     /**
      * Constructs a new {@link BookCursorAdapter}.

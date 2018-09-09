@@ -20,7 +20,7 @@ public class BookProvider extends ContentProvider {
     /**
      * Tag for the log messages
      */
-    public static final String LOG_TAG = BookProvider.class.getSimpleName();
+    private static final String LOG_TAG = BookProvider.class.getSimpleName();
 
     /**
      * URI matcher code for the content URI for the books table

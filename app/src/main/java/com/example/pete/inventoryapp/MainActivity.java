@@ -31,15 +31,12 @@ public class MainActivity extends AppCompatActivity implements
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
     private static final int BOOK_LOADER = 0;
-    BookCursorAdapter bookCursorAdapter;
+    private BookCursorAdapter bookCursorAdapter;
 
     // View references
-    ListView listView;
-    RelativeLayout emptyView;
-    ImageView emptyImage;
-    TextView emptyTitle;
-    TextView emptySubtitle;
-    FloatingActionButton fab;
+    private ListView listView;
+    private RelativeLayout emptyView;
+    private FloatingActionButton fab;
 
     //endregion constants, instance variables, and View references
 
@@ -99,9 +96,6 @@ public class MainActivity extends AppCompatActivity implements
     private void getViewReferences() {
         listView = findViewById(R.id.listView);
         emptyView = findViewById(R.id.empty_view);
-        emptyImage = findViewById(R.id.empty_image);
-        emptyTitle = findViewById(R.id.empty_title_text);
-        emptySubtitle = findViewById(R.id.empty_subtitle_text);
         fab = findViewById(R.id.fab);
     }
 
@@ -161,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu options from the res/menu/menu_main_options.xmlions.xml file.
+        // Inflate the menu
         getMenuInflater().inflate(R.menu.menu_main_options, menu);
         return true;
     }
