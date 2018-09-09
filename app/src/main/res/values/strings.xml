@@ -2,7 +2,7 @@
     <string name="app_name">InventoryApp</string>
 
     <!-- Activity titles -->
-    <string name="title_main_activity">Inventory Catalog</string>
+    <string name="title_main_activity">Books Inventory</string>
     <string name="title_viewer_activity">View Book</string>
     <string name="title_editor_activity_edit">Edit Book</string>
     <string name="title_editor_activity_new">Add Book</string>

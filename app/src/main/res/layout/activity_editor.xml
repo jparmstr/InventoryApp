@@ -7,106 +7,113 @@
     android:orientation="vertical"
     tools:context=".EditorActivity">
 
-    <!--Name-->
-    <TextView
-        android:id="@+id/labelName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:labelFor="@id/editTextName"
-        android:padding="@dimen/editor_activity_padding"
-        android:text="@string/edit_name_hint"
-        android:textColor="@color/colorAccent"
-        android:textSize="@dimen/editor_activity_label_font_size" />
-
-    <EditText
-        android:id="@+id/editTextName"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/labelName"
-        android:inputType="text"
-        android:padding="@dimen/editor_activity_padding" />
+        android:padding="@dimen/activity_outer_padding">
 
-    <!--Price-->
-    <TextView
-        android:id="@+id/labelPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextName"
-        android:labelFor="@id/editTextPrice"
-        android:padding="@dimen/editor_activity_padding"
-        android:text="@string/edit_price_hint"
-        android:textColor="@color/colorAccent"
-        android:textSize="@dimen/editor_activity_label_font_size" />
+        <!--Name-->
+        <TextView
+            android:id="@+id/labelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/editTextName"
+            android:padding="@dimen/editor_activity_padding"
+            android:text="@string/edit_name_hint"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/editor_activity_label_font_size" />
 
-    <EditText
-        android:id="@+id/editTextPrice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/labelPrice"
-        android:inputType="numberDecimal"
-        android:padding="@dimen/editor_activity_padding" />
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelName"
+            android:inputType="text"
+            android:padding="@dimen/editor_activity_padding" />
 
-    <!--Quantity-->
-    <TextView
-        android:id="@+id/labelQuantity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextPrice"
-        android:labelFor="@id/editTextQuantity"
-        android:padding="@dimen/editor_activity_padding"
-        android:text="@string/edit_quantity_hint"
-        android:textColor="@color/colorAccent"
-        android:textSize="@dimen/editor_activity_label_font_size" />
+        <!--Price-->
+        <TextView
+            android:id="@+id/labelPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextName"
+            android:labelFor="@id/editTextPrice"
+            android:padding="@dimen/editor_activity_padding"
+            android:text="@string/edit_price_hint"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/editor_activity_label_font_size" />
 
-    <EditText
-        android:id="@+id/editTextQuantity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/labelQuantity"
-        android:inputType="number"
-        android:padding="@dimen/editor_activity_padding" />
+        <EditText
+            android:id="@+id/editTextPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelPrice"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/editor_activity_padding" />
 
-    <!--Supplier Name-->
-    <TextView
-        android:id="@+id/labelSupplierName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextQuantity"
-        android:labelFor="@id/editTextSupplierName"
-        android:padding="@dimen/editor_activity_padding"
-        android:text="@string/edit_supplier_name_hint"
-        android:textColor="@color/colorAccent"
-        android:textSize="@dimen/editor_activity_label_font_size" />
+        <!--Quantity-->
+        <TextView
+            android:id="@+id/labelQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextPrice"
+            android:labelFor="@id/editTextQuantity"
+            android:padding="@dimen/editor_activity_padding"
+            android:text="@string/edit_quantity_hint"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/editor_activity_label_font_size" />
 
-    <EditText
-        android:id="@+id/editTextSupplierName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/edit_optional_hint"
-        android:layout_below="@+id/labelSupplierName"
-        android:inputType="text"
-        android:padding="@dimen/editor_activity_padding" />
+        <EditText
+            android:id="@+id/editTextQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelQuantity"
+            android:inputType="number"
+            android:padding="@dimen/editor_activity_padding" />
 
-    <!--Supplier Phone Number-->
-    <TextView
-        android:id="@+id/labelSupplierPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextSupplierName"
-        android:labelFor="@id/editTextSupplierPhone"
-        android:padding="@dimen/editor_activity_padding"
-        android:text="@string/edit_supplier_phone_hint"
-        android:textColor="@color/colorAccent"
-        android:textSize="@dimen/editor_activity_label_font_size" />
+        <!--Supplier Name-->
+        <TextView
+            android:id="@+id/labelSupplierName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextQuantity"
+            android:labelFor="@id/editTextSupplierName"
+            android:padding="@dimen/editor_activity_padding"
+            android:text="@string/edit_supplier_name_hint"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/editor_activity_label_font_size" />
 
-    <EditText
-        android:id="@+id/editTextSupplierPhone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/labelSupplierPhone"
-        android:inputType="phone"
-        android:hint="@string/edit_optional_hint"
-        android:padding="@dimen/editor_activity_padding" />
+        <EditText
+            android:id="@+id/editTextSupplierName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelSupplierName"
+            android:hint="@string/edit_optional_hint"
+            android:inputType="text"
+            android:padding="@dimen/editor_activity_padding" />
+
+        <!--Supplier Phone Number-->
+        <TextView
+            android:id="@+id/labelSupplierPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextSupplierName"
+            android:labelFor="@id/editTextSupplierPhone"
+            android:padding="@dimen/editor_activity_padding"
+            android:text="@string/edit_supplier_phone_hint"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/editor_activity_label_font_size" />
+
+        <EditText
+            android:id="@+id/editTextSupplierPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelSupplierPhone"
+            android:hint="@string/edit_optional_hint"
+            android:inputType="phone"
+            android:padding="@dimen/editor_activity_padding" />
+
+    </RelativeLayout>
 
     <!-- Save and Cancel buttons (bottom navigation view) -->
     <android.support.design.widget.BottomNavigationView
